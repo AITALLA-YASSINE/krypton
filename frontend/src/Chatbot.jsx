@@ -7,6 +7,17 @@ import { useT } from "./i18n";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
+// Strip common markdown so replies render as clean text
+function stripMarkdown(s = "") {
+  return s
+    .replace(/\*\*(.*?)\*\*/g, "$1")
+    .replace(/__(.*?)__/g, "$1")
+    .replace(/(^|\s)\*(?!\s)([^*\n]+?)\*/g, "$1$2")
+    .replace(/(^|\s)_(?!\s)([^_\n]+?)_/g, "$1$2")
+    .replace(/^\s*[-*+]\s+/gm, "• ")
+    .replace(/`([^`]+)`/g, "$1");
+}
+
 export default function Chatbot({ lang = "fr" }) {
   const t = useT(lang);
   const [open, setOpen] = useState(false);
@@ -17,6 +28,13 @@ export default function Chatbot({ lang = "fr" }) {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef(null);
+
+  // Allow opening via global event (hero "Discuter avec l'IA" button)
+  useEffect(() => {
+    const handler = () => setOpen(true);
+    window.addEventListener("krypton:open-chat", handler);
+    return () => window.removeEventListener("krypton:open-chat", handler);
+  }, []);
 
   // Reset welcome when lang changes
   useEffect(() => {
@@ -43,7 +61,7 @@ export default function Chatbot({ lang = "fr" }) {
         language: lang,
       });
       setSessionId(res.data.session_id);
-      setMessages((m) => [...m, { role: "assistant", content: res.data.reply }]);
+      setMessages((m) => [...m, { role: "assistant", content: stripMarkdown(res.data.reply) }]);
     } catch (e) {
       setMessages((m) => [
         ...m,

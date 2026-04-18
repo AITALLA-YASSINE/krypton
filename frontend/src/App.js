@@ -191,6 +191,10 @@ function Hero({ t, lang }) {
             </a>
             <a
               href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event("krypton:open-chat"));
+              }}
               className="btn-ghost-glow px-7 py-4 rounded-full inline-flex items-center gap-2 text-sm font-semibold"
               data-testid="hero-chat-btn"
             >
