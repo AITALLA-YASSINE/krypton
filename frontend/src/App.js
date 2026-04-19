@@ -6,6 +6,7 @@ import {
   Star, Quote, Zap, Layers, Palette, ChevronDown, Send,
 } from "lucide-react";
 import Chatbot from "./Chatbot";
+import Showcase from "./Showcase";
 import { SECTORS, PORTFOLIO, waLink, WHATSAPP_DISPLAY } from "./data";
 import { detectLang, LANGS, useT } from "./i18n";
 
@@ -700,6 +701,7 @@ function App() {
       <main>
         <Hero t={t} lang={lang} />
         <Services t={t} />
+        <Showcase lang={lang} />
         <Sectors t={t} lang={lang} />
         <Portfolio t={t} lang={lang} />
         <Process t={t} />
