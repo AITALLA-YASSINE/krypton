@@ -170,7 +170,7 @@ export const PORTFOLIO = [
     image: "https://images.unsplash.com/photo-1758691461888-b74515208d7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkb2N0b3IlMjBzdGV0aG9zY29wZSUyMGhvc3BpdGFsfGVufDB8fHx8MTc3NjUxMDY0M3ww&ixlib=rb-4.1.0&q=85",
     tag: { fr: "Médical", en: "Medical", ar: "طبي", darija: "طبي" },
     title: { fr: "Clinique Avicenne", en: "Clinique Avicenne", ar: "عيادة ابن سينا", darija: "كليني ابن سينا" },
-    desc: { fr: "Plateforme patient + chatbot IA", en: "Patient platform + AI chatbot", ar: "منصة مرضى + شاتبوت", darija: "منصة مرضى + شاتبوت" },
+    desc: { fr: "Plateforme patient + chatbot", en: "Patient platform + chatbot", ar: "منصة مرضى + شاتبوت", darija: "منصة مرضى + شاتبوت" },
   },
   {
     key: "coiffeur",
@@ -181,7 +181,7 @@ export const PORTFOLIO = [
   },
   {
     key: "plombier",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?crop=entropy&cs=srgb&fm=jpg&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?crop=entropy&cs=srgb&fm=jpg&w=1200&q=80",
     tag: { fr: "Plombier", en: "Plumber", ar: "سباك", darija: "بلومبي" },
     title: { fr: "ProPlomb Lyon", en: "ProPlomb Lyon", ar: "برو بلومب ليون", darija: "برو بلومب ليون" },
     desc: { fr: "Devis instantané + urgences 24/7", en: "Instant quote + 24/7 emergency", ar: "عرض سعر + طوارئ 24/7", darija: "عرض ثمن + طوارئ 24/7" },

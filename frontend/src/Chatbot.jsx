@@ -198,7 +198,7 @@ export default function Chatbot({ lang = "fr" }) {
               </div>
               <p className="text-[10px] text-gray-500 text-center mt-2 tracking-wider uppercase">
                 <MessageCircle className="w-3 h-3 inline mr-1" />
-                Krypton AI · Claude Sonnet 4.5
+                Krypton · Assistant intelligent
               </p>
             </div>
           </motion.div>

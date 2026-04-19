@@ -59,7 +59,7 @@ function Header({ lang, setLang, t }) {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-4">
         <a href="#top" className="flex items-center gap-2" data-testid="header-logo">
-          <Logo size={36} />
+          <Logo size={110} />
         </a>
         <nav className="hidden lg:flex items-center gap-7 text-sm text-gray-300">
           {navItems.map((n) => (
@@ -229,13 +229,13 @@ function Hero({ t, lang }) {
             <div className="absolute w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full border border-[#00D4FF]/20 animate-[spin_30s_linear_infinite]" />
             <div className="absolute w-[200px] h-[200px] md:w-[280px] md:h-[280px] rounded-full border border-[#8B5CF6]/20 animate-[spin_24s_linear_infinite_reverse]" />
             <div className="absolute w-[120px] h-[120px] md:w-[180px] md:h-[180px] rounded-full bg-gradient-to-br from-[#00D4FF]/20 to-[#8B5CF6]/20 blur-2xl" />
-            <div className="relative glass rounded-3xl p-6 md:p-8 w-[240px] md:w-[280px]">
-              <Logo size={60} />
+            <div className="relative glass rounded-3xl p-6 md:p-8 w-[260px] md:w-[320px]">
+              <Logo size={96} />
               <div className="mt-5 space-y-2.5">
                 {[
                   { Icon: Globe, label: "Web" },
                   { Icon: Smartphone, label: "Mobile" },
-                  { Icon: Bot, label: "AI Chatbot" },
+                  { Icon: Bot, label: "Chatbot" },
                   { Icon: Palette, label: "Design" },
                 ].map(({ Icon, label }, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm text-gray-200">
@@ -254,7 +254,7 @@ function Hero({ t, lang }) {
       <div className="relative mt-16 md:mt-24 py-5 border-y border-white/5 marquee">
         <div className="marquee-track">
           {[...Array(2)].flatMap((_, k) =>
-            ["PREMIUM", "FAST", "RESPONSIVE", "AI-POWERED", "MULTILINGUAL", "SECURE", "SEO", "24/7 SUPPORT", "CONVERSION"].map((w, i) => (
+            ["PREMIUM", "FAST", "RESPONSIVE", "MULTILINGUAL", "SECURE", "SEO", "24/7 SUPPORT", "CONVERSION"].map((w, i) => (
               <div key={`${k}-${i}`} className="flex items-center gap-10 text-sm font-display font-bold tracking-widest text-white/50">
                 <span>{w}</span>
                 <Sparkles className="w-4 h-4 text-[#00D4FF]" />
@@ -664,7 +664,7 @@ function Footer({ t }) {
     <footer className="relative border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex items-center gap-4">
-          <Logo size={34} />
+          <Logo size={56} />
           <span className="text-sm text-gray-400">{t.footer.tagline}</span>
         </div>
         <div className="text-xs text-gray-500">
